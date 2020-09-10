@@ -1,7 +1,7 @@
 (function($) {
 
 	/**
-	 * Generate an indented list of links from a nav. Meant for use with panel().
+	 * Generate an list of links from a nav. Meant for use with panel().
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn.navList = function() {
@@ -34,18 +34,15 @@
 
 	};
 
-	/**
-	 * Panel-ify an element.
-	 * @param {object} userConfig User config.
-	 * @return {jQuery} jQuery object.
-	 */
+	
+	//   Paneling an element.
 	$.fn.panel = function(userConfig) {
 
 		// No elements?
 			if (this.length == 0)
 				return $this;
 
-		// Multiple elements?
+		// More than 1 element?
 			if (this.length > 1) {
 
 				for (var i=0; i < this.length; i++)
@@ -55,20 +52,20 @@
 
 			}
 
-		// Vars.
+		// Variables.
 			var	$this = $(this),
 				$body = $('body'),
 				$window = $(window),
 				id = $this.attr('id'),
 				config;
 
-		// Config.
+		// Configuration.
 			config = $.extend({
 
-				// Delay.
+				// Delaying.
 					delay: 0,
 
-				// Hide panel on link click.
+				// Hide panel on click.
 					hideOnClick: false,
 
 				// Hide panel on escape keypress.
@@ -98,9 +95,9 @@
 				if (typeof config.target != 'jQuery')
 					config.target = $(config.target);
 
-		// Panel.
+		// The Panel.
 
-			// Methods.
+			// My Methods.
 				$this._hide = function(event) {
 
 					// Already hidden? Bail.
@@ -115,7 +112,7 @@
 
 						}
 
-					// Hide.
+					// Hide me.
 						config.target.removeClass(config.visibleClass);
 
 					// Post-hide stuff.
