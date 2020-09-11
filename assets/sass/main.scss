@@ -7,13 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
 @import url('fontawesome-all.min.css');
 
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
-// Breakpoints.
 
 	@include breakpoints((
 		xlarge:  ( 1281px,  1680px ),
@@ -22,8 +16,6 @@
 		small:   ( null,    736px  )
 	));
 
-// Reset.
-// Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
 
 	html, body, div, span, applet, object,
 	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -93,10 +85,7 @@
 		appearance: none;
 	}
 
-/* Basic */
-
-	// Set box model to border-box.
-	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+// basic
 		html {
 			box-sizing: border-box;
 		}
@@ -108,7 +97,7 @@
 	body {
 		padding-top: 3.5em;
 
-		// Stops initial animations until page loads.
+		// Stops initial anims until page loads.
 			&.is-preload {
 				*, *:before, *:after {
 					@include vendor('animation', 'none !important');
@@ -240,7 +229,7 @@
 		}
 	}
 
-/* Container */
+/* Containers */
 
 	.container {
 		margin: 0 auto;
@@ -285,7 +274,7 @@
 		}
 	}
 
-/* Row */
+/* Rows */
 
 	.row {
 		@include html-grid((25px, 25px));
@@ -307,7 +296,7 @@
 		}
 	}
 
-/* Form */
+/* Forms */
 
 	form {
 		label {
@@ -372,7 +361,7 @@
 		}
 	}
 
-/* Tables */
+/* Table */
 
 	table {
 		width: 100%;
@@ -406,7 +395,7 @@
 		}
 	}
 
-/* Section/Article */
+/* Sections/Articles */
 
 	section, article {
 		margin-bottom: 3em;
@@ -419,7 +408,7 @@
 		margin-bottom: 0;
 	}
 
-/* Image */
+/* Images */
 
 	.image {
 		display: inline-block;
@@ -457,7 +446,7 @@
 		}
 	}
 
-/* Button */
+/* Buttons */
 
 	input[type="button"],
 	input[type="submit"],
@@ -514,7 +503,7 @@
 		}
 	}
 
-/* List */
+/* Lists */
 
 	ul {
 		list-style: disc;
@@ -535,7 +524,7 @@
 		}
 	}
 
-/* Social */
+/* Socials */
 
 	ul.social {
 		cursor: default;
@@ -652,7 +641,7 @@
 		}
 	}
 
-/* Actions */
+/* Action */
 
 	ul.actions {
 		list-style: none;
@@ -669,7 +658,7 @@
 		}
 	}
 
-/* Box */
+/* Boxes */
 
 	.box {
 		background: #fff;
@@ -700,7 +689,7 @@
 		}
 	}
 
-/* Icons */
+/* Icon */
 
 	.icon {
 		@include icon;
@@ -738,7 +727,7 @@
 		}
 	}
 
-/* Wrappers */
+/* Wrapper */
 
 	.wrapper {
 		background-image: url('images/bg.png');
@@ -786,7 +775,7 @@
 		}
 	}
 
-/* Nav */
+/* Navigation */
 
 	#nav {
 		background-color: #282828;
@@ -848,7 +837,7 @@
 		}
 	}
 
-/* Articles */
+/* Article */
 
 	body > article {
 		margin-bottom: 0;
@@ -889,7 +878,7 @@
 		}
 	}
 
-/* Copyright */
+/* Copyrights */
 
 	#copyright {
 		color: #666;
@@ -924,11 +913,11 @@
 		}
 	}
 
-/* Large */
+/* Larger */
 
 	@include breakpoint('<=large') {
 
-		/* Basic */
+		/* Basics */
 
 			body {
 				font-size: 11pt;
@@ -942,7 +931,7 @@
 				margin: 0 0 4em 0;
 			}
 
-		/* Wrappers */
+		/* Wrapper */
 
 			.wrapper {
 				padding: 5em 0 5em 0;
@@ -970,7 +959,7 @@
 
 	}
 
-/* Medium */
+/* Mediums */
 
 	@include breakpoint('<=medium') {
 
@@ -987,7 +976,7 @@
 
 	}
 
-/* Small */
+/* Smaller */
 
 	@include breakpoint('<=small') {
 
@@ -1033,13 +1022,13 @@
 				margin: 1.5em 0 2em 0;
 			}
 
-		/* Section/Article */
+		/* Sections/Articles */
 
 			section, article {
 				clear: both;
 			}
 
-		/* Button */
+		/* Buttons */
 
 			input[type="button"],
 			input[type="submit"],
@@ -1057,7 +1046,7 @@
 				}
 			}
 
-		/* Social */
+		/* Socials */
 
 			ul.social {
 				padding: 1em 0.5em 0 0.5em;
@@ -1075,7 +1064,7 @@
 				}
 			}
 
-		/* Actions */
+		/* Action */
 
 			ul.actions {
 				margin: 0;
@@ -1090,7 +1079,7 @@
 				}
 			}
 
-		/* Box */
+		/* Boxes */
 
 			.box {
 				padding: 30px 20px 30px 20px;
@@ -1127,14 +1116,14 @@
 				}
 			}
 
-		/* Wrappers */
+		/* Wrapper */
 
 			.wrapper {
 				padding: 3em 0;
 				text-align: center;
 			}
 
-		/* Nav */
+		/* Navigation */
 			#nav {
 				height: 44px;
 				line-height: 44px;
@@ -1151,7 +1140,7 @@
 				}
 			}
 
-		/* Articles */
+		/* Article */
 
 			#top {
 				padding: 3em 0;
@@ -1173,7 +1162,7 @@
 				}
 			}
 
-		/* Copyright */
+		/* Copyrights */
 
 			#copyright {
 				font-size: 1em;
